@@ -18,6 +18,9 @@
 
     if($contador == 0){
         echo "Datos incorrectos, vuelva a intentarlo";
+        session_start();
+        $_SESSION["mensaje"] = "Error, datos incorrectos o no existen";
+        header("Location: ".$URL."/login");
     }else{
         echo "Datos correctos";
         session_start();

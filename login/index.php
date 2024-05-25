@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="../public/templates/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../public/templates/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+  <!-- Sweet Alert 2-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <style>
     body{
@@ -24,6 +26,26 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <!-- /.login-logo -->
+
+  <?php
+    session_start();
+    if(isset($_SESSION["mensaje"])){
+      $respuesta = $_SESSION["mensaje"]; ?>
+      <script>
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "<?php echo $_SESSION["mensaje"]?>",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      </script>
+    <?php
+    session_destroy();
+    }
+  ?>
+
+
   <center>
     <img src="imagenes/1929276.jpg" alt="logo Bazar" width="100px">
   </center>
