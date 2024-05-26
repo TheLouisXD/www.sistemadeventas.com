@@ -1,7 +1,6 @@
 
 <!-- Pagina de Login en donde el usuario debe ingresar su nombre y su contraseña para posteriormente generar una sesion e ingresar al sistema, creado con el framework adminLTE -->
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,11 +38,17 @@
       $respuesta = $_SESSION["mensaje"]; ?>
       <script>
         Swal.fire({
-          position: "top-end",
-          icon: "error",
-          title: "<?php echo $_SESSION["mensaje"]?>",
-          showConfirmButton: false,
-          timer: 1500
+          title: "Error: datos no encontrados",
+          width: 600,
+          padding: "3em",
+          color: "#716add",
+          background: "#fff url(/images/trees.png)",
+          backdrop: `
+            rgba(0,0,123,0.4)
+            url("imagenes/nyan-cat.gif")
+            left top
+            no-repeat
+          `
         });
       </script>
     <?php
@@ -59,8 +64,9 @@
 
   <br>
   <div class="card card-outline card-primary">
+    <!-- Titulo del login -->
     <div class="card-header text-center">
-      <a href="../public/templates/AdminLTE-3.2.0/index2.html" class="h1"><b>Sistema de </b>ventas</a>
+      <p class="h1"><b>Sistema de </b>ventas</p>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Ingresa tus credenciales</p>
