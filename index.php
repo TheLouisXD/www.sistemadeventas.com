@@ -41,6 +41,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 <body class="hold-transition sidebar-mini">
 
+<!-- Mensaje de ingreso exitoso -->
 <script>
     Swal.fire({
       position: "top-end",
@@ -50,8 +51,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
       timer: 1500
     });
 </script>
-<div class="wrapper">
 
+
+<div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
