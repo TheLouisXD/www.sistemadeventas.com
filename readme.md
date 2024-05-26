@@ -9,3 +9,7 @@ Este proyecto consiste en crea un sistema de ventas con la ayuda de un curso de 
 - XAMPP
 - HTML
 - SweetAlert2
+
+Link del curso: https://youtu.be/Wlm_nTnRhIo?si=A4TD6j7lIp7CDgWo
+
+(Para hacer funcionar el sistema es recomendable seguir los primero videos del curso, alli se detalla como levantar el servidor y correr el codigo PHP)
