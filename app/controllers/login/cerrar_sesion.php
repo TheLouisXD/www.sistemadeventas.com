@@ -1,3 +1,5 @@
+<!-- Este archivo cierra la sesion del usuario -->
+
 <?php
     include("../../config.php");
 

@@ -1,3 +1,7 @@
+
+<!-- Pagina de Login en donde el usuario debe ingresar su nombre y su contraseña para posteriormente generar una sesion e ingresar al sistema, creado con el framework adminLTE -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,16 +21,18 @@
   <!-- Sweet Alert 2-->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+  <!-- Fondo de la pagina de LOGIN -->
   <style>
     body{
         background-image: url("https://i.pinimg.com/564x/c8/77/9f/c8779f09b14cb34c1702187db6f63154.jpg");
     }
   </style>
+
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-  <!-- /.login-logo -->
 
+<!-- Codigo php con sweetalert2 que permite mostrar un mensaje cuando los datos ingresados no son correctos -->
   <?php
     session_start();
     if(isset($_SESSION["mensaje"])){
@@ -45,10 +51,12 @@
     }
   ?>
 
-
+  <!-- Logo del bazar aqui -->
   <center>
     <img src="imagenes/1929276.jpg" alt="logo Bazar" width="100px">
   </center>
+
+
   <br>
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
@@ -57,6 +65,7 @@
     <div class="card-body">
       <p class="login-box-msg">Ingresa tus credenciales</p>
 
+      <!-- Formulario en donde el usuario ingresa sus credenciales, el formulario envia la informacion a ingreso.php para verificar la informacion con la base de datos -->
       <form action="../app/controllers/login/ingreso.php" method="post" >
         <div class="input-group mb-3">
           <input type="text" name="nombre" class="form-control" placeholder="nombre">
@@ -81,6 +90,7 @@
           <div class="col-12">
             <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
           </div>
+          
           <!-- /.col -->
         </div>
       </form>

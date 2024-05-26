@@ -1,3 +1,7 @@
+<!-- Pagina principal o dashboard del sistema de ventas, creado utilizando el framework adminLTE, en este archivo se implementa la vista principal, junto con el uso de frameworks como sweetalert2 y uso de php para validar sesiones -->
+
+
+<!-- Codigo PHP para validar que el usuario haya iniciado sesion, de lo contrario, debera llevarlo a la pantalla de login. -->
 <?php
 
   include("app/config.php");
@@ -61,6 +65,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li>
+
+      <!-- Creamos un boton que llama al archivo que cierra la sesion -->
       <a href="<?php echo $URL;?>/app/controllers/login/cerrar_sesion.php" class="btn btn-danger">Cerrar sesion</a>
     </ul>
 
@@ -202,6 +208,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="image">
           <img src="public/templates/AdminLTE-3.2.0/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
+        <!-- Usamos el session_nombre para poner el nombre del usuario en el navbar -->
         <div class="info">
           <a href="#" class="d-block"><?php echo $_SESSION["session_nombre"];?></a>
         </div>

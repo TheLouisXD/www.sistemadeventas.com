@@ -1,3 +1,5 @@
+<!-- En este archivo creamos la conexion con la base de datos -->
+
 <?php
 // Definimos variables para la conexion con la base de datos UwU
 define("SERVIDOR","localhost");
