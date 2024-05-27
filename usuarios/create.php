@@ -68,7 +68,7 @@
                               <hr>
                               <!-- Agregamos los botones -->
                               <div class="form-group">
-                                <a href="" class="btn btn-secondary">Cancelar</a>
+                                <a class="btn btn-secondary" type="clear">Cancelar</a>
                                 <button class="btn btn-primary" type="submit">Guardar</button>
                               </div>
 
