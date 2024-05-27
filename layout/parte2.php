@@ -1,6 +1,6 @@
 <!-- Este archivo incluye la base la interfaz del sistema de ventas, el hacerlo de forma separada nos permite reutilizar codigo y asi ahorrar lineas de codigo -->
 
-
+<!-- Sidebar desplegable que mostrara datos del usuario para asi saber que usuario ingreso al sistema -->
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Agregamos informacion del usuario como su nombre y su correo -->

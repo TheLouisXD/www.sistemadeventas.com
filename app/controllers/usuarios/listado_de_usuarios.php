@@ -2,7 +2,7 @@
 
 <?php 
     // incluimos la conexion a la base de datos
-    include("../../config.php");
+    // include("../../config.php");
 
     // creamos una consulta sql que recupere todos los campos de la tabla usuarios.
     $sql_usuarios = "SELECT * FROM tb_usuarios";

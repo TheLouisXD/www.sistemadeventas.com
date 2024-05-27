@@ -34,7 +34,7 @@
         <!-- Aqui creamos una tarjeta para listado de usuarios -->
         <div class="row">
             <div class="col-md-8">
-                <div class="card card-primary">
+                <div class="card card-outline card-primary">
                     <div class="card-header">
                         <h3 class="card-title">Usuarios</h3>
                         <div class="card-tools">
