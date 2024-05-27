@@ -74,7 +74,7 @@
       <!-- Formulario en donde el usuario ingresa sus credenciales, el formulario envia la informacion a ingreso.php para verificar la informacion con la base de datos -->
       <form action="../app/controllers/login/ingreso.php" method="post" >
         <div class="input-group mb-3">
-          <input type="text" name="nombre" class="form-control" placeholder="nombre">
+          <input type="text" name="nombre" class="form-control" placeholder="nombre" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" name="password_user" class="form-control" placeholder="Password">
+          <input type="password" name="password_user" class="form-control" placeholder="Password" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>

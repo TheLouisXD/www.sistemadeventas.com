@@ -14,6 +14,7 @@
         $id_usuario = $usuario['id_usuario'];
         $email_tabla = $usuario['email'];
         $Fecha_creacion = $usuario['FyH_creacion'];
+        $Fecha_modificacion = $usuario['FyH_actualizacion'];
     }
 
   }else{

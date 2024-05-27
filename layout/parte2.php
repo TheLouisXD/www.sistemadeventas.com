@@ -10,6 +10,7 @@
       <p>Nombre: <br> <?php echo $nombre_sesion?></p>
       <p>Correo: <?php echo $email_tabla?></p>
       <p>Fecha y hora de creacion: <br> <?php echo $Fecha_creacion?></p>
+      <p>Fecha y hora de modificacion: <br> <?php echo $Fecha_modificacion?></p>
     </div>
   </aside>
   <!-- /.control-sidebar -->
