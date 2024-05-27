@@ -48,20 +48,21 @@
                             <!-- El formulario envia la informacion al controlador create.php para asi poder registrar los datos -->
                             <form action="../app/controllers/usuarios/create.php" method="post" autocomplete="off">
                               <div class="form-group">
+                                <!-- Hay que agregar el nombre a cada campo -->
                                 <label for="">Nombre y Apellido</label>
-                                <input type="text" class="form-control" placeholder="Ejemplo: Luis Perez" required>
+                                <input type="text" name="Nombres" class="form-control" placeholder="Ejemplo: Luis Perez" required>
                               </div>
                               <div class="form-group">
                                 <label for="">E-mail</label>
-                                <input type="email" class="form-control" placeholder="Ejemplo: Luis.Perez@gmail.com" required>
+                                <input type="email" name="email" class="form-control" placeholder="Ejemplo: Luis.Perez@gmail.com" required>
                               </div>
                               <div class="form-group">
                                 <label for="">Contraseña</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="password_user" class="form-control" required>
                               </div>
                               <div class="form-group">
                                 <label for="">Repita la contraseña</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="password_repeat" class="form-control" required>
                               </div>
 
                               <hr>
