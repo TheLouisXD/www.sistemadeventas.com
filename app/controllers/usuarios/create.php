@@ -13,7 +13,7 @@
 
     // verificamos que ambas contraseñas sean iguales
     if ($password_user == $password_repeat) {
-        
+
         // Usamos password hash para encriptar la contraseña
         $password_user = password_hash($password_user, PASSWORD_DEFAULT);
 
@@ -33,8 +33,6 @@
     } else {
         echo "Error, las contraseñas no coinciden";
     }
-
-
-
-
 ?>
+
+<button onclick="history.back()">Volver atras</button>

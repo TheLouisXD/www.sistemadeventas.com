@@ -8,9 +8,9 @@
     $nombre = $_POST['nombre'];
     $password_user = $_POST['password_user'];
 
-    # Consulta a la base de datos, si el usuario existe, el contador aumenta a 1 y recuperamos el nombre y correo.
+    # Consulta a la base de datos, si el usuario existe, el contador aumenta a 1 y recuperamos el nombre, correo y contraseña.
     $contador = 0;
-    $sql = "SELECT * FROM tb_usuarios WHERE `nombres` = '$nombre' AND `password_user` = '$password_user'";
+    $sql = "SELECT * FROM tb_usuarios WHERE `nombres` = '$nombre'";
     $query = $pdo->prepare($sql);
     $query->execute();
     $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -18,18 +18,20 @@
         $contador = $contador + 1;
         $email_tabla = $usuario['email'];
         $nombres = $usuario['nombres'];
+        $password_user_tabla = $usuario['password_user'];
     }
 
     # Si el contador es 0, quiere decir que el usuario no existe, creamos una sesion con un mensaje.
-    if($contador == 0){
-        echo "Datos incorrectos, vuelva a intentarlo";
-        session_start();
-        $_SESSION["mensaje"] = "Error, datos incorrectos o no existen";
-        header("Location: ".$URL."/login");
-    }else{
+    # Usamos password_verify con el dato obtenido del formulario y la contraseña de la tabla para verificar que sean la misma.
+    if( ($contador > 0) && (password_verify($password_user, $password_user_tabla))) {
         echo "Datos correctos";
         session_start();
         $_SESSION["session_nombre"] = $nombre;
         header('Location: '.$URL.'/index.php');
+    }else{
+        echo "Datos incorrectos, vuelva a intentarlo";
+        session_start();
+        $_SESSION["mensaje"] = "Error, datos incorrectos o no existen";
+        header("Location: ".$URL."/login");
     }
 ?>

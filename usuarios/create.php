@@ -68,7 +68,9 @@
                               <hr>
                               <!-- Agregamos los botones -->
                               <div class="form-group">
-                                <a class="btn btn-secondary" type="clear">Cancelar</a>
+                                <!-- Este boton nos envia a el listado de usuarios -->
+                                <a class="btn btn-secondary" href="index.php">Cancelar</a>
+                                <!-- Este boton envia la informaciond del formulario -->
                                 <button class="btn btn-primary" type="submit">Guardar</button>
                               </div>
 

@@ -44,21 +44,25 @@
                     <!-- Insertamos una tabla en la tarjeta -->
                     <div class="card-body">
                         <table class="table table-bordered table-hover">
-                            <tr>
+                          <!-- Cambiamos el color de la cabecera de la tabla -->
+                            <thead class="thead-dark">
                                 <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Correo</th>
-                            </tr>
+                            </thead>
                             <!-- Agregamos el codigo correspondiente para mostrar la informacion obtenida en el controlador de listado de usuarios -->
                             <tbody>
                                 <?php 
                                     //incluimos el controlador pero en la parte de arriba para evitar errores
                                     // include("../app/controllers/usuarios/listado_de_usuarios.php");
-
-                                    foreach($datos_usuarios as $usuario_dato){?>
+                                    // Creamos un contador para contar los usuarios
+                                    $contador = 0;
+                                    // por cada usuario se imprimira informacion
+                                    foreach($datos_usuarios as $usuario_dato){
+                                      $contador = $contador + 1; ?>
                                     <!-- concatenamos html para llenar la tabla con la informacion de la base de datos que necesitamos -->
                                     <tr>
-                                        <td><?php echo $usuario_dato['id_usuario'];?></td>
+                                        <td><?php echo $contador;?></td>
                                         <td><?php echo $usuario_dato['nombres'];?></td>
                                         <td><?php echo $usuario_dato['email'];?></td>
                                     </tr>
