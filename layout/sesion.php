@@ -11,7 +11,9 @@
     $query->execute();
     $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
     foreach( $usuarios as $usuario ){
+        $id_usuario = $usuario['id_usuario'];
         $email_tabla = $usuario['email'];
+        $Fecha_creacion = $usuario['FyH_creacion'];
     }
 
   }else{

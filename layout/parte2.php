@@ -6,8 +6,10 @@
     <!-- Agregamos informacion del usuario como su nombre y su correo -->
     <div class="p-3">
       <h5>Datos del usuario</h5>
+      <p>Id: <br> <?php echo $id_usuario?></p>
       <p>Nombre: <br> <?php echo $nombre_sesion?></p>
       <p>Correo: <?php echo $email_tabla?></p>
+      <p>Fecha y hora de creacion: <br> <?php echo $Fecha_creacion?></p>
     </div>
   </aside>
   <!-- /.control-sidebar -->
