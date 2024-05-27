@@ -8,7 +8,25 @@
 
   include("../app/controllers/usuarios/listado_de_usuarios.php");
 
-  include("../layout/parte1.php");?>
+  include("../layout/parte1.php");
+
+  // Añadimos un mensaje en caso de que se haya registrado un usuario con exito
+  if (isset($_SESSION["mensaje"])){
+    $respuesta = $_SESSION['mensaje']; ?>
+    
+    <!-- Error: no aparece el texto -->
+    <script>
+      Swal.fire({
+        icon: "success",
+        Title: "Se ha registrado al usuario <?php echo $respuesta?>",
+        timer: 5000
+      });
+    </script>
+    <?php
+    // Despues de mostrar el mensaje, destruimos la sesion
+    unset($_SESSION["mensaje"]);
+  }  
+?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

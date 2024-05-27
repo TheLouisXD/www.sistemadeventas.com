@@ -25,7 +25,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <body class="hold-transition sidebar-mini">
 
 <!-- Mensaje de ingreso exitoso -->
-<script>
+<!-- <script>
     Swal.fire({
       position: "top-end",
       icon: "success",
@@ -33,7 +33,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       showConfirmButton: false,
       timer: 1500
     });
-</script>
+</script> -->
 
 
 <div class="wrapper">

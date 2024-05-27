@@ -25,13 +25,20 @@
         $sentencia->bindParam("email", $email);
         $sentencia->bindParam("password_user", $password_user);
         $sentencia->bindParam("fyh_creacion", $fechaHora);
+
         // Ejecutamos la sentencia
         $sentencia->execute();
 
-        echo "Datos ingresados con exito";
+        // iniciamos sesion con un mensaje de exito
+        session_start();
+        $_SESSION["mensaje"] = $nombres;
+        header("Location:".$URL."/usuarios");
 
     } else {
-        echo "Error, las contraseñas no coinciden";
+        // Creamos una sesion con un mensaje de error.
+        session_start();
+        $_SESSION["mensaje"] = "Error, las contraseñas no son identicas";
+        header("Location:".$URL."/usuarios/create.php");
     }
 ?>
 

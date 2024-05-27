@@ -6,7 +6,23 @@
   // Reducimos codigo e importamos la verificacion
   include("../layout/sesion.php");
 
-  include("../layout/parte1.php");?>
+  include("../layout/parte1.php");
+
+  // Añadimos un mensaje en caso de que las contraseñas no sean identicas
+  if (isset($_SESSION["mensaje"])){
+    $respuesta = $_SESSION['mensaje']; ?>
+    <script>
+      Swal.fire({
+        icon: "error",
+        Text: "<?php echo $respuesta?>",
+        timer: 5000
+      });
+    </script>
+    <?php
+    // Despues de mostrar el mensaje, destruimos la sesion
+     unset($_SESSION["mensaje"]);
+  }  
+?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
